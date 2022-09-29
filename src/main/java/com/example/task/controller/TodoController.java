@@ -86,6 +86,12 @@ public String getNewUser(Model model) {
 }
 @PostMapping("/create")
 public String registerUser(UserForm userForm) {
+	User user = new User();
+	user.setTitle(userForm.getTitle());
+	user.setDate(userForm.getDate());
+	user.setTask(userForm.getTask());
+	
+	userRepository.save(user);
 	// ユーザ一覧画面へリダイレクト
 	return "redirect:/main";
 }
