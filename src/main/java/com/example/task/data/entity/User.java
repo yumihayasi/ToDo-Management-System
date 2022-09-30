@@ -14,5 +14,9 @@ public class User {
 	public String title;
 	private LocalDate date;
 	public String task;
+	public String userName;
+	public String password;
+	public String name;
+	public String roleName;
 	
 }
